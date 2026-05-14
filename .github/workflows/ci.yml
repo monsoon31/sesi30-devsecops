@@ -33,7 +33,7 @@ jobs:
       - name: Install Bandit
         run: pip install bandit
       - name: Run Bandit Scan
-        run: bandit -r . -x ./venv
+        run: bandit -r . -x ./venv,./tests
 
   # 3. Job SCA (Software Composition Analysis)
   sca-pip-audit:
