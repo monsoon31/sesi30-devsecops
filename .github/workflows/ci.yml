@@ -66,6 +66,7 @@ jobs:
     name: Build & Push to Docker Hub
     needs: [unit-test, sast-bandit, sca-pip-audit, secret-scan]
     runs-on: ubuntu-latest
+    environtment: Dockerhub
     steps:
       - name: Checkout
         uses: actions/checkout@v4
